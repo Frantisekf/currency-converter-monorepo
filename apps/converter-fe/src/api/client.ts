@@ -1,5 +1,5 @@
 import { CONVERSION_API_BASE_URL } from '../utils/Constants';
-import { type ConversionApiResponse, type MoneyType } from '../utils/types';
+import { type ConversionApiResponse, type MoneyType } from '@converter-app/shared-types';
 
 /**
  * Fetches the currency symbols from the API.

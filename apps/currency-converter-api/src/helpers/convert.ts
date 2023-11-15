@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
-import { type RatesResponseData } from '../global/types'
-import { type MoneyType } from '../global/types'
+import { type RatesResponseData } from '@converter-app/shared-types'
+import { type MoneyType } from '@converter-app/shared-types'
 import baseLogger from './baseLogger'
 
 
@@ -37,7 +37,7 @@ export const convert = async (Money: MoneyType): Promise<any> => {
     }
 
     const rate = ratesData.rates[to]
-    const convertedResult = amount * rate
+    const convertedResult = Number(amount) * rate
     const roundedResult = Math.round(convertedResult * 100) / 100 // Round to 2 decimal places
     return roundedResult
   } catch (error) {

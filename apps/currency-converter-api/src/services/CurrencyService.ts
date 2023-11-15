@@ -1,7 +1,7 @@
 import { CURRENCIES } from '../helpers/currencies'
 import ConvertedCurrencyModel from '../models/Converter'
 import { convert } from '../helpers/convert'
-import { type MoneyType } from '../global/types'
+import { type MoneyType } from '@converter-app/shared-types'
 
 // could be substituted with a use of a different API for currency symbols
 // reason for this service is to fetch in on the frontend and display supported currencies

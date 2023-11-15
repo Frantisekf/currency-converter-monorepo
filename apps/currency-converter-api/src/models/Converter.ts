@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import { type DataToConvert } from '../global/types'
+import { type DataToConvert } from '@converter-app/shared-types'
 import { Decimal128 } from 'mongodb'
 const Schema = mongoose.Schema
 

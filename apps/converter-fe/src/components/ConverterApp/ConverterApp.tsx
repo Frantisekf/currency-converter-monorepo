@@ -8,7 +8,7 @@ import {
   type CurrencyOption,
   type ConversionEntry,
   type ConversionApiResponse
-} from '../../utils/types';
+} from '@converter-app/shared-types';
 import ConversionResultsTable from '../ConversionResultsTable/ConversionResultsTable';
 import styled, { css } from 'styled-components';
 import { findMostCommonPropertyValue } from '../../utils/helpers';
