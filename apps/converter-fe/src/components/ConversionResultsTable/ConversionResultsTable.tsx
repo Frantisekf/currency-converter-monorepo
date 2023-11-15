@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { type CurrencyTableProps } from '../../utils/types';
+import { type CurrencyTableProps } from '@converter-app/shared-types';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { ISOStringToDate } from '../../utils/helpers';
 
