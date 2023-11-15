@@ -1,0 +1,56 @@
+{
+  "name": "currency-converter-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/currency-converter-api/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/currency-converter-api",
+        "main": "apps/currency-converter-api/src/main.ts",
+        "tsConfig": "apps/currency-converter-api/tsconfig.app.json",
+        "isolatedConfig": true,
+        "webpackConfig": "apps/currency-converter-api/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "currency-converter-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "currency-converter-api:build:development"
+        },
+        "production": {
+          "buildTarget": "currency-converter-api:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/currency-converter-api/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/currency-converter-api/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
