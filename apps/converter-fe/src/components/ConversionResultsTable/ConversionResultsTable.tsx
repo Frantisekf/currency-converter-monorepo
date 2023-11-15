@@ -11,7 +11,7 @@ const Table = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 25px;
-  margin-top: 40vh;
+  margin-top: 15vh;
 `;
 
 const Row = styled.div`

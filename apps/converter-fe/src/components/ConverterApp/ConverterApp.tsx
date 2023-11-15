@@ -199,7 +199,7 @@ const ConverterApp: React.FC = () => {
           onChange={handleOriginCurrencyChange}
           isSearchable={true}
           styles={customStyles}
-          placeholder="type/select currency"
+          placeholder="select currency"
         />
         <span>to:</span>
         <Select
@@ -208,7 +208,7 @@ const ConverterApp: React.FC = () => {
           styles={customStyles}
           onChange={handleDestCurrencyChange}
           isSearchable={true}
-          placeholder="type/select currency"
+          placeholder="select currency"
         />
         <button onClick={handleSubmitConversion}>
           Convert

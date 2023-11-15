@@ -37,7 +37,7 @@ export const convert = async (Money: MoneyType): Promise<any> => {
     }
 
     const rate = ratesData.rates[to]
-    const convertedResult = Number(amount) * rate
+    const convertedResult = parseFloat(amount) * rate
     const roundedResult = Math.round(convertedResult * 100) / 100 // Round to 2 decimal places
     return roundedResult
   } catch (error) {
