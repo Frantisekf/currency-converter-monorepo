@@ -1,5 +1,5 @@
 {
-  "name": "converter-fe",
+  "name": "converter-frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/converter-fe/src",
   "projectType": "application",
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/converter-fe"
+        "outputPath": "dist/apps/converter-frontend"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "converter-fe:build"
+        "buildTarget": "converter-frontend:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "converter-fe:build:development",
+          "buildTarget": "converter-frontend:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "converter-fe:build:production",
+          "buildTarget": "converter-frontend:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "converter-fe:build"
+        "buildTarget": "converter-frontend:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "converter-fe:build:development"
+          "buildTarget": "converter-frontend:build:development"
         },
         "production": {
-          "buildTarget": "converter-fe:build:production"
+          "buildTarget": "converter-frontend:build:production"
         }
       }
     },
@@ -57,20 +57,20 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/converter-fe"
+        "reportsDirectory": "../../coverage/apps/converter-frontend"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/converter-fe/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/converter-frontend/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "converter-fe:build"
+        "buildTarget": "converter-frontend:build"
       }
     }
   },

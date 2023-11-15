@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build:currency-converter-api": "nx run currency-converter-api:build:production",
-    "build:converter-fe": "nx run converter-fe:build:production",
+    "build:converter-frontend": "nx run converter-frontend:build:production",
     "test": "jest run apps/currency-converter-api/src/tests/*.test.ts --detectOpenHandles"
   },
   "private": true,
