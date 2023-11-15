@@ -1,7 +1,7 @@
 {
   "name": "converter-frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/converter-fe/src",
+  "sourceRoot": "apps/converter-frontend/src",
   "projectType": "application",
   "targets": {
     "build": {
