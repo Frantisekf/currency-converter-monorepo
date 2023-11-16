@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@netlify/functions": "^2.4.0",
     "@swc/helpers": "~0.5.2",
     "axios": "^1.0.0",
     "cors": "^2.8.5",
@@ -36,6 +37,7 @@
     "@nx/express": "^17.1.2",
     "@nx/jest": "17.1.2",
     "@nx/js": "17.1.2",
+    "@nx/netlify": "^17.0.0",
     "@nx/node": "17.1.2",
     "@nx/react": "17.0.3",
     "@nx/vite": "17.0.3",
