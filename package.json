@@ -5,6 +5,7 @@
   "scripts": {
     "build:currency-converter-api": "nx run currency-converter-api:build:production",
     "build:converter-frontend": "nx run converter-frontend:build:production",
+    "build": "nx run-many --target=build --projects=currency-converter-api, converter-frontend --parallel=true",
     "test": "jest run apps/currency-converter-api/src/tests/*.test.ts --detectOpenHandles",
     "start": "node dist/apps/currency-converter-api/main.js",
     "nx": "nx"
