@@ -4,9 +4,14 @@ import mongoose from 'mongoose'
 import currencyRouter from './routes/CurrencyRouter'
 import { limiter } from './middleware/rateLimit'
 import { DB_URL, SERVER_PORT } from './helpers/constants'
+import * as path from 'path';
+
 import baseLogger from './helpers/baseLogger'
 
 const app = express()
+
+const CLIENT_BUILD_PATH = path.join(__dirname, '../nx-fullstack');
+
 
 try {
   void mongoose.connect(DB_URL)
@@ -26,8 +31,15 @@ app.use(
     extended: true
   })
 )
+app.use(express.static(CLIENT_BUILD_PATH));
+
 
 app.use('/api', currencyRouter)
+
+
+app.get('*', (request, response) => {
+  response.sendFile(path.join(CLIENT_BUILD_PATH, 'index.html'));
+});
 
 app.listen(SERVER_PORT || 3333, () => {
   baseLogger.info(`Server listening on port ${process.env.SERVER_PORT}`)
