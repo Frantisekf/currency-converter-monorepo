@@ -1,1 +1,1 @@
-web: npx nx run currency-converter-api:build:production
+web: npm start
