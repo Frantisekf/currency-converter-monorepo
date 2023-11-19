@@ -7,7 +7,7 @@
     "build:converter-frontend": "nx run converter-frontend:build:production",
     "test": "jest run apps/currency-converter-api/src/tests/*.test.ts --detectOpenHandles",
     "start": "node dist/apps/currency-converter-api/main.js",
-    "nx": "nx",
+    "nx": "nx"
   },
   "private": true,
   "dependencies": {
