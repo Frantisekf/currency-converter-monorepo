@@ -41,8 +41,8 @@ app.get('*', (request, response) => {
   response.sendFile(path.join(CLIENT_BUILD_PATH, 'index.html'));
 });
 
-app.listen(SERVER_PORT || 3333, () => {
-  baseLogger.info(`Server listening on port ${process.env.SERVER_PORT}`)
+app.listen(3333, () => {
+  baseLogger.info(`Server listening on port 3333`)
 })
 
 export default app
